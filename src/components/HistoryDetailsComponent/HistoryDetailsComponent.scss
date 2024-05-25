@@ -1,0 +1,84 @@
+.details__block {
+  padding: 40px 0;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  .left__block {
+    flex-grow: 1;
+    padding: 15px 25px;
+    color: var(--first-text-color);
+    border-radius: 20px;
+    background: rgb(2, 0, 36);
+    background: linear-gradient(
+      230deg,
+      rgba(2, 0, 36, 1) 0%,
+      rgba(238, 203, 88, 0.768) 0%,
+      rgba(255, 255, 255, 1) 100%
+    );
+    box-shadow: 2px 5px 25px -3px rgba(180, 180, 180, 0.35);
+
+    .this__temp {
+      margin: 0;
+      font-size: 98px;
+      font-weight: 500;
+      color: var(--main-temp-color);
+    }
+    .this__time {
+      margin: 0;
+      padding: 10px 0;
+      font-size: 30px;
+    }
+    .this__city {
+      margin: 0;
+      font-size: 30px;
+      padding-bottom: 10px;
+    }
+    .this__wind {
+      margin: 0;
+      font-size: 30px;
+      .wind__params {
+        .params__item {
+          color: var(--main-temp-color);
+        }
+      }
+    }
+  }
+  .right__block {
+    flex-grow: 1;
+    padding: 15px 25px;
+    // border: 1px solid royalblue;
+    text-align: right;
+    border-radius: 20px;
+    color: var(--first-text-color);
+    background: rgb(2, 0, 36);
+    background: linear-gradient(
+      120deg,
+      rgba(2, 0, 36, 1) 0%,
+      rgba(238, 203, 88, 0.768) 0%,
+      rgba(255, 255, 255, 1) 100%
+    );
+    box-shadow: 2px 5px 25px -3px rgba(180, 180, 180, 0.35);
+    .this__day_description {
+      margin: 0;
+      font-size: 75px;
+      font-weight: 500;
+      color: var(--main-temp-color);
+      padding-bottom: 10px;
+    }
+    .feels__temperature {
+      margin: 0;
+      padding-bottom: 10px;
+      font-size: 30px;
+    }
+    .this__day_pressure {
+      margin: 0;
+      padding-bottom: 10px;
+      font-size: 30px;
+    }
+    .this__day_humidity {
+      margin: 0;
+      padding-bottom: 10px;
+      font-size: 30px;
+    }
+  }
+}

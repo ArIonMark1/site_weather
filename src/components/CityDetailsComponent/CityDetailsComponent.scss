@@ -1,0 +1,94 @@
+.this__content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 30px;
+  min-width: 100%;
+
+  align-items: center;
+  flex-wrap: nowrap;
+  .this__day {
+    padding: 20px;
+    width: 100%;
+    text-align: left;
+    max-width: 400px;
+    box-shadow: 2px 5px 25px -3px rgba(180, 180, 180, 0.35);
+    background: rgb(2, 0, 36);
+    background: linear-gradient(
+      120deg,
+      rgba(2, 0, 36, 1) 0%,
+      rgba(191, 231, 249, 0.768) 0%,
+      rgba(255, 255, 255, 1) 100%
+    );
+    // border: 1px solid red;
+    border-radius: 20px;
+    .this__temp {
+      font-size: 96px;
+      font-weight: 500;
+      line-height: 1.2;
+      color: var(--main-temp-color);
+    }
+    .this__day__day {
+      font-size: 40px;
+      font-weight: 400;
+    }
+    .bottom__block {
+      font-size: 24px;
+      color: var(--first-text-color);
+      .wind__speed {
+        color: var(--header-color);
+        font-size: 28px;
+      }
+      .wind__gust {
+        color: var(--header-color);
+        font-size: 28px;
+      }
+    }
+  }
+  .this__day_info {
+    padding: 20px;
+    width: 100%;
+    text-align: left;
+    box-shadow: 2px 5px 25px -3px rgba(180, 180, 180, 0.35);
+    background: rgb(2, 0, 36);
+    background: linear-gradient(
+      335deg,
+      rgba(2, 0, 36, 1) 0%,
+      rgba(180, 228, 250, 0.8) 0%,
+      rgba(255, 255, 255, 1) 100%
+    );
+
+    border-radius: 20px;
+    width: 100%;
+    .this__day_info_items {
+      color: var(--header-color);
+      // font-size: 28px;
+    }
+    .this__day_description {
+      font-size: 42px;
+      border-bottom: 1px solid #7979795d;
+      text-align: right;
+      padding-right: 30px;
+      margin-bottom: 10px;
+      .description__title {
+        font-size: 36px;
+      }
+    }
+    .description__title {
+      color: var(--first-text-color);
+      font-size: 24px;
+    }
+    .this__day_temperatura {
+    }
+    .feels__temperature {
+    }
+    .maximum__temperature {
+    }
+    .minimum__temperature {
+    }
+    .this__day_pressure {
+    }
+    .this__day_humidity {
+    }
+  }
+}

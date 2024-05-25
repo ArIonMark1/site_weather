@@ -1,0 +1,44 @@
+@import "normalize.css";
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  font-size: 24px;
+  box-sizing: border-box;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  --first-text-color: #939cb0;
+  --text-color: #f2f2f2;
+  --main-temp-color: #4793ff;
+  --active-text-color: #eb6e4b;
+  --error-text-color: rgba(255, 99, 71, 0.8);
+  --shadow-color: 2px 5px 25px -3px rgba(180, 180, 180, 0.25);
+  --header-color: #48484a;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+.container {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0 15px;
+
+  // @media screen and (min-width: 480px) {
+  // }
+  // @media screen and (min-width: 768px) {
+  // }
+  @media screen and (min-width: 1400px) {
+    max-width: 1400px;
+  }
+}

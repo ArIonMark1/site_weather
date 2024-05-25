@@ -1,0 +1,38 @@
+.form {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  //   border: 1px solid rebeccapurple;
+  .cityTitle {
+    padding: 15px 15px 15px 25px;
+    width: 100%;
+    font-size: 22px;
+    font-weight: 500;
+    color: rgba(0, 0, 0, 0.6);
+    max-width: 600px;
+    border: none;
+    border-radius: 10px 0 0 10px;
+    box-shadow: 2px 5px 25px -3px rgba(180, 180, 180, 0.6);
+    &:active,
+    &:focus {
+      border: none;
+      outline: none;
+    }
+    &::placeholder {
+      font-size: 22px;
+      color: rgba(0, 0, 0, 0.3);
+    }
+  }
+  .button {
+    padding: 12px 20px 12px;
+    // height: 100%;
+    font-size: 24px;
+    align-items: center;
+    background-color: royalblue;
+    color: aliceblue;
+    border-radius: 0 10px 10px 0;
+    border: none;
+  }
+}

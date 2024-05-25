@@ -1,0 +1,27 @@
+.main__page {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  text-align: center;
+}
+.response__container {
+  padding: 50px 0 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.error__block {
+  padding: 10px;
+  width: 800px;
+  border-radius: 20px;
+  box-shadow: var(--shadow-color);
+}
+.error__message {
+  font-weight: 400;
+  font-size: 28px;
+  color: var(--first-text-color);
+}
+.error__code {
+  font-weight: 500;
+  font-size: 55px;
+  color: var(--error-text-color);
+}

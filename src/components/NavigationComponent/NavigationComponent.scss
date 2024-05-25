@@ -1,0 +1,14 @@
+.navigation {
+  width: 100%;
+  text-align: center;
+  &__link {
+    display: inline-block;
+    text-decoration: none;
+    padding: 12px;
+    font-weight: 700;
+    color: var(--text-color);
+    &.active {
+      color: var(--active-text-color);
+    }
+  }
+}
