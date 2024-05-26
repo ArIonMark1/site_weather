@@ -10,7 +10,7 @@ const SearchCityComponent = ({ submit }: Props) => {
 
   const onSubmitInputTitle = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    submit(inputVal);
+    submit(inputVal.toLowerCase());
   };
 
   return (

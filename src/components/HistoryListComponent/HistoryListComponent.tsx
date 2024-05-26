@@ -1,17 +1,21 @@
-import { Weather } from "../CityDetailsComponent/CityDetailsComponent.types";
+// import { Weather } from "../CityDetailsComponent/CityDetailsComponent.types";
+import { LogEntry } from "../../utils/requestLogger.types";
 import "./HistoryListComponent.scss";
 
-const HistoryListComponent = ({ requestData }: { requestData: Weather }) => {
+const HistoryListComponent = ({ requestItem }: { requestItem: LogEntry }) => {
   return (
     <>
-      {requestData && (
+      {requestItem && (
         <>
           <div className="history__info">
-            {requestData.name}{" "}
-            <span className="history__city"> {requestData.sys.country}</span>
+            {requestItem.requestData.name} [
+            <span className="history__city">
+              {requestItem.requestData.sys.country}
+            </span>
+            ]<span>Last request: {requestItem.timestamp.split(",")[0]}</span>
           </div>
           <div className="history__temperature">
-            {Math.floor(requestData.main.temp - 273.15)}°
+            {Math.floor(requestItem.requestData.main.temp - 273.15)}°
           </div>
         </>
       )}

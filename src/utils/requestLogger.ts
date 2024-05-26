@@ -26,7 +26,7 @@ const requestLogger: Middleware =
         type: (action as ArrivedAction).type,
         endpoint: (action as ArrivedAction).meta.arg.endpointName,
         status: "success",
-        timestamp: new Date().toISOString(),
+        timestamp: new Date().toLocaleString(),
         requestData: (action as ArrivedAction)
           .payload as ArrivedAction["payload"],
       };

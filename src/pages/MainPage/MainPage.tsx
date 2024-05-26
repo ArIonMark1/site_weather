@@ -29,6 +29,7 @@ const MainPage = () => {
               <>
                 {isSuccess && (
                   <>
+                    {console.log(data)}
                     <CityDetailsComponent onRender={data} />
                   </>
                 )}

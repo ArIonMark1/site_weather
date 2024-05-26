@@ -30,8 +30,8 @@ const HistoryDetailsComponent = () => {
                 {Math.floor(targetWeather.requestData.main.temp - 273.15)}°
               </p>
               <p className="this__time">
-                <span className="description__title">Time:</span>{" "}
-                <span>21:54</span>
+                <span className="description__title">Time data:</span>{" "}
+                <span>{targetWeather.timestamp.split(",")[1]}</span>
               </p>
               <p className="this__city">
                 <span className="description__title">City:</span>{" "}

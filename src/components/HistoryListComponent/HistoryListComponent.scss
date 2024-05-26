@@ -1,5 +1,8 @@
 .history__info {
-  // border: 1px solid green;
+  display: flex;
+  gap: 10px;
+  flex-wrap: nowrap;
+  align-items: center;
 }
 .history__city {
   font-size: 34px;
@@ -8,5 +11,4 @@
 .history__temperature {
   font-size: 34px;
   color: var(--error-text-color);
-  //   border: 1px solid darkcyan;
 }

@@ -1,9 +1,21 @@
+import { useEffect } from "react";
 import "./CityDetailsComponent.scss";
 import { Weather } from "./CityDetailsComponent.types";
 interface PropsTypes {
   onRender: Weather;
 }
 const CityDetailsComponent = ({ onRender }: PropsTypes) => {
+  const returnStringTime = (): string => {
+    const curentTime = new Date().toLocaleTimeString();
+    return curentTime;
+  };
+
+  useEffect(() => {
+    return () => {
+      returnStringTime();
+    };
+  }, [onRender]);
+
   return (
     <>
       <div className="this__content">
@@ -16,7 +28,7 @@ const CityDetailsComponent = ({ onRender }: PropsTypes) => {
           </div>
           <div className="bottom__block">
             <div className="this__time">
-              Time: <span>21:54</span>
+              Time: <span>{returnStringTime()}</span>
             </div>
             <div className="this__city">
               City: <span>{onRender.name}</span>

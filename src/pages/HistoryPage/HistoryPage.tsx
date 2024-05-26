@@ -24,11 +24,11 @@ const HistoryPage = () => {
           {historyData &&
             historyData.length > 0 &&
             historyData.map((obj: LogEntry) => (
-              <li key={obj.id} className="history__item">
-                <NavLink to={`${obj.id}`} className="history__item__link">
-                  <HistoryListComponent requestData={obj.requestData} />
-                </NavLink>
-              </li>
+              <NavLink to={`${obj.id}`} className="history__link">
+                <li key={obj.id} className="history__link__item">
+                  <HistoryListComponent requestItem={obj} />
+                </li>
+              </NavLink>
             ))}
         </ul>
       </div>
