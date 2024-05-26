@@ -1,19 +1,12 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { LogEntry } from "../../utils/requestLogger";
+import { LogEntry } from "../../utils/requestLogger.types";
+import { baseSkeleton } from "../../utils/skeletonResponse";
 import "./HistoryDetailsComponent.scss";
-
-interface LogEntryWithRequestData extends LogEntry {
-  requestData: {
-    name: string;
-  };
-}
 
 const HistoryDetailsComponent = () => {
   const { id } = useParams<{ id: string }>();
-  const [targetWeather, setTargetWeather] = useState<
-    LogEntryWithRequestData | object
-  >({});
+  const [targetWeather, setTargetWeather] = useState<LogEntry>(baseSkeleton);
 
   useEffect(() => {
     if (id) {
@@ -22,7 +15,7 @@ const HistoryDetailsComponent = () => {
       );
       const target = allLocalLog.find(
         (elem: LogEntry) => elem.id === Number(id)
-      ) as LogEntryWithRequestData | object;
+      ) as LogEntry;
       setTargetWeather(target || {});
     }
   }, [id]);
