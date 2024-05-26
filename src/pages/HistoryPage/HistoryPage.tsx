@@ -30,11 +30,11 @@ const HistoryPage = () => {
               </NavLink>
             ))
           ) : (
-            <div>
-              <p className="error__message">
-                No records of weather requests...
-              </p>
-            </div>
+            <NavLink to={"/"} className="history__link">
+              <li className="history__link__item">
+                No records. Klick here to start searching.
+              </li>
+            </NavLink>
           )}
         </ul>
       </div>
