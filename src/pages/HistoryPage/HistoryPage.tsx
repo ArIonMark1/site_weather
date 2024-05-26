@@ -21,15 +21,21 @@ const HistoryPage = () => {
       <div className="container">
         <div className="title__history">Research History</div>
         <ul className="history">
-          {historyData &&
-            historyData.length > 0 &&
+          {historyData && historyData.length > 0 ? (
             historyData.map((obj: LogEntry) => (
               <NavLink to={`${obj.id}`} className="history__link">
                 <li key={obj.id} className="history__link__item">
                   <HistoryListComponent requestItem={obj} />
                 </li>
               </NavLink>
-            ))}
+            ))
+          ) : (
+            <div>
+              <p className="error__message">
+                No records of weather requests...
+              </p>
+            </div>
+          )}
         </ul>
       </div>
 
