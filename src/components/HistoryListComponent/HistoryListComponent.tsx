@@ -12,7 +12,10 @@ const HistoryListComponent = ({ requestItem }: { requestItem: LogEntry }) => {
             <span className="history__city">
               {requestItem.requestData.sys.country}
             </span>
-            ]<span>Last request: {requestItem.timestamp.split(",")[0]}</span>
+            ]
+            <span>
+              Last request: {requestItem.timestamp.split(",")[0]} time
+            </span>
           </div>
           <div className="history__temperature">
             {Math.floor(requestItem.requestData.main.temp - 273.15)}°
