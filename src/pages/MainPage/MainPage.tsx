@@ -33,7 +33,7 @@ const MainPage = () => {
                     <CityDetailsComponent onRender={data} />
                   </>
                 )}
-                {isError && (
+                {isError && (error as ErrorPrompt).data && (
                   <div className="error__block">
                     <p className="error__message">
                       <span className="error__code">
@@ -41,6 +41,11 @@ const MainPage = () => {
                       </span>
                       Wrong request.... {(error as ErrorPrompt).data.message}
                     </p>
+                  </div>
+                )}
+                {isError && !(error as ErrorPrompt).data && (
+                  <div className="error__block">
+                    <p className="error__message">Internet Disconnected...</p>
                   </div>
                 )}
               </>

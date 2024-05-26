@@ -1,4 +1,3 @@
-// import { Weather } from "../CityDetailsComponent/CityDetailsComponent.types";
 import { LogEntry } from "../../utils/requestLogger.types";
 import "./HistoryListComponent.scss";
 

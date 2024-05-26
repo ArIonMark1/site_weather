@@ -15,8 +15,6 @@ const requestLogger: Middleware =
         "/fulfilled"
       )
     ) {
-      // const storage = store;
-      // console.log(storage);
       const requestLog: LogEntry[] = JSON.parse(
         localStorage.getItem("requestLog") || "[]"
       );
