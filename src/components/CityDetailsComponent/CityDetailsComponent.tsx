@@ -1,7 +1,9 @@
 import "./CityDetailsComponent.scss";
 import { Weather } from "./CityDetailsComponent.types";
-
-const CityDetailsComponent = ({ onRender }: { onRender: Weather }) => {
+interface PropsTypes {
+  onRender: Weather;
+}
+const CityDetailsComponent = ({ onRender }: PropsTypes) => {
   return (
     <>
       <div className="this__content">

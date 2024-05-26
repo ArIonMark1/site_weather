@@ -1,6 +1,6 @@
 import { PuffLoader } from "react-spinners";
 
-const styles = {
+const styles: { [key: string]: React.CSSProperties } = {
   container: {
     minHeight: "calc(100vh - 550px)",
     padding: "0 15px",

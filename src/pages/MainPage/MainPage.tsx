@@ -3,6 +3,7 @@ import { useGetCityByTitleQuery } from "../../redux/features/weatherApi/requestA
 import SearchCityComponent from "../../components/SearchCityComponent";
 import CityDetailsComponent from "../../components/CityDetailsComponent";
 import Loader from "../../components/Loader";
+import { ErrorPrompt } from "../../utils/requestLogger.types";
 import "./MainPage.scss";
 
 const MainPage = () => {
@@ -34,8 +35,10 @@ const MainPage = () => {
                 {isError && (
                   <div className="error__block">
                     <p className="error__message">
-                      <span className="error__code">{error.data.cod} </span>
-                      Wrong request.... {error.data.message}
+                      <span className="error__code">
+                        {(error as ErrorPrompt).data.cod}{" "}
+                      </span>
+                      Wrong request.... {(error as ErrorPrompt).data.message}
                     </p>
                   </div>
                 )}
